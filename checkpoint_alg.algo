@@ -1,0 +1,21 @@
+ALGORITHM counter
+VAR
+    chart: STRING := ("");
+    nbcharacters: number := 0;
+    nbvowels: number:= 0;
+    nbwords: number:=0;
+BEGIN
+    Read(chart)
+    WHILE (chart<>(".")) DO{
+        IF (chart<>(" ")) THEN
+               {nbcharacters+=1;
+               ELSE_IF (chart=("a","e","i","o","u")) THEN
+                  nbvowels+=1;
+                  }
+               ELSE{
+                nbwords+=1;
+               }
+    }
+    END_WHILE
+    Write( "nbwords:"+nbwords , "nbcharacters:"+nbcharacters  , "nbvowels:"+nbvowels)
+END
